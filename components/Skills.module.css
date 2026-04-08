@@ -1,0 +1,130 @@
+.skills {
+  background: var(--dark);
+}
+
+.techIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.techIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+}
+
+.techIcon span {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--tech-color, var(--primary));
+  transition: all 0.3s ease;
+}
+
+.techIcon:hover span {
+  background: var(--card-border);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.techIcon p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skillCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.skillCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skillIcon {
+  font-size: 2rem;
+}
+
+.skillTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skillMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skillLevel {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.skillBar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+@media (max-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
